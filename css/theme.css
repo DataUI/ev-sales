@@ -1,0 +1,156 @@
+/* Base styles */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 small {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin: 10px 0 20px 3px;
+}
+
+sup {
+    font-size: 10px;
+    top: -7px;
+}
+
+/* Layout */
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    position: relative;
+}
+
+header {
+    background-color: #225ea8;
+    color: #fff;
+    flex: 0 1 auto;
+    margin-bottom: 1px;    
+}
+
+main {
+    flex: 1 1 auto;
+    height: 100%;
+    position: relative;
+}
+
+
+/* Map */
+
+#map-container {
+    flex: 1 1 auto;
+}
+
+.legend-control-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    line-height: 45px;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Map legend */
+
+.map-legend {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Map popup */
+
+.leaflet-popup-content dd {
+    margin-bottom: 10px;
+}
+
+.leaflet-popup-content > p {
+  margin: 0;
+}
+
+.leaflet-popup-content .title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.leaflet-popup-content .value {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Slider control */
+
+.slider-desc {
+  font-size: 11px;
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+.slider-panel .control {
+    display: inline-block;
+    /*margin-bottom: 15px;*/
+    vertical-align: middle;
+}
+
+.slider.slider-horizontal {
+    margin: 0 15px;
+    top: -5px;
+    width: 50%;
+}
+
+.slider-label {
+    display: block;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* Map side panel */
+
+.panel-info {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 300px;
+    z-index: 999;
+}
+
+.panel-info .h4 {
+    font-weight: 700;
+}
+
+.panel-info .h5 {
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.ft {
+    font-size: 11px;
+    margin-bottom: 0;
+}
+
+.ft .btn-link {
+    padding-left: 0;
+}
+
+.ft .glyphicon {
+  font-size: 10px;
+  top: -.5px;
+}
+
+.btn[aria-expanded="true"] .glyphicon-chevron-right:before {
+    content: "\e114";
+}

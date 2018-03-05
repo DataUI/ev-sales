@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Electric Vehicle Sales in the U.S.</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css" integrity="sha384-GRuLCLvwGroSe5pWRxy820Yopoo416jKH1fDfBrN9tYo3VFYE7cPFqnrdRUHavzO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body class="wrapper">
+  <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+  <header class="">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1>Electric Vehicle Sales in the U.S. <small>Visualizing BEV and PHEV Sales from 2011 - 2017</small></h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="wrapper">
+    <div id="map-container"></div>
+    <div class="panel-info">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="slider-panel text-center">
+            <h2 class="h4"><span id="temporalLegend">2011</span></h2>
+            <div class="control">
+              <button id="btn-prev" class="btn-prev btn btn-default btn-xs" type="button">
+                <span class="sr-only">Previous Year</span> <span class="glyphicon glyphicon-chevron-left"></span>
+              </button>
+              <span class="slider-label">2011</span>
+            </div>
+            <input class="range-slider" data-slider-id='ex1Slider' type="text" data-slider-step="1">
+            <div class="control">
+              <button id="btn-next" class="btn-next btn btn-default btn-xs" type="button">
+                <span class="sr-only">Next Year</span>
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </button>
+              <span class="slider-label">2017</span>
+            </div>
+          </div>
+          <p class="slider-desc">Sales include retail, fleet, and government fleet.</p>
+          <hr>
+          <div class="map-legend">
+            <div class="row">
+              <div class="col-sm-12">
+                <div id="legend-evSales">
+                  <h3 class="h5">BEV (Battery Electric Vehicle)</h3>
+                  <p>Total Sales for Year: <span id="total-evSales" class=""></span></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-12">
+                <div id="legend-phevSales">
+                  <h3 class="h5">PHEV (Plug-in Hybrid Electric Vehicle)</h3>
+                  <p>Total Sales for Year: <span id="total-phevSales"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="ft">
+            <p>BEVs run exclusively on electricity. PHEVs can use gas or electricity.</p>
+            <button class="btn btn-link btn-xs" type="button" data-toggle="collapse" data-target="#txt-source" aria-expanded="false" aria-controls="txt-source">
+              <span class="glyphicon glyphicon-chevron-right"></span> Data Source
+            </button>
+            <p id="txt-source" class="collapse">Alliance of Automobile Manufacturers(2018). Advanced Technology Vehicle Sales Dashboard. Data compiled by the Alliance of Automobile Manufacturers using information provided by IHSMarkit. Data last updated 2/16/2018. Retrieved 03/05/2018 from <a href="https://autoalliance.org/energy-environment/advanced-technology-vehicle-sales-dashboard/" target="_blank">Advanced Technology Vehicle Sales Dashboard</a></p>
+          </div>
+        </div>
+      </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+  window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+  </script>
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+  <script src="js/vendor/leaflet-hash.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js" integrity="sha384-JNpI5e3ajulk0mvqbdWbp7K5k2on9YsbSZXVB1+EqC0vV+6wPpQRg0RF2WbM/I80" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
